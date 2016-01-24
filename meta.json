@@ -9,11 +9,12 @@
       "type": "string",
       "required": true,
       "label": "Project description",
-      "default": "A Vue.js project"
+      "default": "Frontend for ShareJob Wechat Games"
     },
     "author": {
       "type": "string",
-      "label": "Author"
+      "label": "Author",
+      "default": "GeekBean Technology Co., Ltd."
     },
     "private": {
       "type": "boolean",

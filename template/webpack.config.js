@@ -1,8 +1,10 @@
 var path = require('path')
 var webpack = require('webpack')
 
+var ExtractTextPlugin = require("extract-text-webpack-plugin")
+
 module.exports = {
-  entry: './src/main.js',
+  entry: ['./src/main.js'],
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -30,11 +32,28 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'url',
         query: {
-          limit: 10000,
-          name: '[name].[ext]?[hash]'
+          limit: 5000,
+          name: '[name].[ext]'
         }
       }
     ]
+  },
+  plugins: [
+    new ExtractTextPlugin("style.css")
+  ],
+  vue: {
+    autoprefixer: {
+      browsers: ['> 5% in CN']
+    },
+    loaders: {
+      css: ExtractTextPlugin.extract("css"),
+      less: ExtractTextPlugin.extract("css!less")
+    }
+  },
+  babel: {
+    presets: ["es2015", "stage-2"],
+    plugins: ["transform-runtime"],
+    comments: false
   },
   devServer: {
     historyApiFallback: true,

@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cmn-Hans">
   <head>
     <meta charset="utf-8">
     <title>{{ name }}</title>
+
+    <meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-title" content="{{ name }}">
+    <meta name="x5-page-mode" content="app">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-orientation" content="portrait">
+    <link rel="stylesheet" type="text/css" href="dist/style.css">
   </head>
   <body>
     <app></app>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="dist/build.js"></script>
   </body>
 </html>
