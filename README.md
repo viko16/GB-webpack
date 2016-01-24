@@ -1,31 +1,36 @@
-# vue-webpack-simple-boilerplate
+# GB-webpack
 
-> A simple Webpack setup for `vue-loader` for quick prototyping.
+> A simple Webpack + vue-loader setup for WeChat web pages.
 
-### Usage
+Based on [vuejs-templates/webpack-simple](https://github.com/vuejs-templates/webpack-simple).
 
-This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
 
-``` bash
-$ npm install -g vue-cli
-$ vue init webpack-simple my-project
-$ cd my-project
-$ npm install
-$ npm run dev
-```
+### What's More
 
-### What's Included
+- autoprefixer
+- extract-text-webpack-plugin
+- less-loader
+- vue-resource
+- vue-router
+- Wechat web pages adapted ( JS-SDK injected, HTML Meta, etc)
 
-- `npm run dev`: Webpack + `vue-loader` with proper config for source maps & hot-reload.
 
-- `npm run build`: Production build with HTML/CSS/JS minification.
+> ### Usage
+> 
+> This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
+> 
+> ``` 
+> $ npm install -g vue-cli
+> $ vue init webpack-simple my-project
+> $ cd my-project
+> $ npm install
+> $ npm run dev
+> ```
+> 
+> ### What's Included
+> 
+> - `npm run dev`: Webpack + `vue-loader` with proper config for source maps & hot-reload.
+> - `npm run build`: Production build with HTML/CSS/JS minification.
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-### Fork It And Make Your Own
 
-You can fork this repo to create your own boilerplate, and use it with `vue-cli`:
-
-``` bash
-vue init username/repo my-project
-```
