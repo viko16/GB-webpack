@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h1>Hello World</h1>
         <toast :show.sync='toast.show'
                :text='toast.text'
                :duration="3000"></toast>

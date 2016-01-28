@@ -19,6 +19,7 @@ Vue.http.options.emulateJSON = true;
 // Routing
 export let router = new Router;
 
+// Router setting
 router.map({
   '/index': {
     name: 'index',
@@ -27,7 +28,6 @@ router.map({
   // TODO other pages
 });
 
-// Default router
 router.redirect({
   '*': '/'
 });
@@ -39,8 +39,9 @@ router.alias({
 // Listen router events
 router.beforeEach(function ({ to, next }) {
   Vue.config.debug && console.log('Router Event: Going to ' + to.path);
+  window.scrollTo(0, 0)
   next();
 });
 
 // Let's begin
-router.start(App, '#app');
+router.start(App, 'app');

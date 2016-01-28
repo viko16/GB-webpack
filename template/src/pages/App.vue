@@ -31,7 +31,6 @@
 
     .container {
         margin: 0 auto;
-        max-width: 16rem;
     }
 
     .backdrop {

@@ -29,7 +29,7 @@
         watch: {
             show(val) {
                 if (val && !!this.duration) {
-                    this._timeout = setTimeout(()=> this.show = false, this.duration)
+                    this._timeout = setTimeout(() => this.show = false, this.duration)
                 }
             }
         }
@@ -40,7 +40,7 @@
     #toast {
         position: fixed;
         top: 45%;
-        left: 5rem;
+        left: 50%;
         text-align: center;
         font-size: .8rem;
         line-height: 2;
@@ -51,5 +51,6 @@
         width: 6rem;
         min-height: 1.5rem;
         padding: .5rem;
+        margin-left: -3rem;
     }
 </style>

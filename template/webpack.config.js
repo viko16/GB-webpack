@@ -36,6 +36,9 @@ module.exports = {
           name: '[name].[ext]'
         }
       }
+    ],
+    noParse: [
+      /\.min\.js/
     ]
   },
   plugins: [
@@ -46,8 +49,8 @@ module.exports = {
       browsers: ['> 5% in CN']
     },
     loaders: {
-      css: ExtractTextPlugin.extract("css"),
-      less: ExtractTextPlugin.extract("css!less")
+      css: ExtractTextPlugin.extract('vue-style-loader', 'css'),
+      less: ExtractTextPlugin.extract('vue-style-loader', 'css!less')
     }
   },
   babel: {
@@ -64,13 +67,16 @@ module.exports = {
 
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = 'source-map'
-  // http://vuejs.github.io/vue-loader/workflow/production.html
+
   module.exports.plugins = (module.exports.plugins || []).concat([
+    // short-circuits all Vue.js warning code
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
       }
     }),
+    // minify with dead-code elimination
+    // remove all comments
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
@@ -79,6 +85,7 @@ if (process.env.NODE_ENV === 'production') {
         comments: false
       }
     }),
+    // optimize module ids by occurence count
     new webpack.optimize.OccurenceOrderPlugin()
   ])
 }
