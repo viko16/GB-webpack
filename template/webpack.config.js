@@ -46,7 +46,7 @@ module.exports = {
   ],
   vue: {
     autoprefixer: {
-      browsers: ['> 5% in CN']
+      browsers: ['> 0.5% in CN']
     },
     loaders: {
       css: ExtractTextPlugin.extract('vue-style-loader', 'css'),
