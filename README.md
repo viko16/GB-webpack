@@ -1,4 +1,4 @@
-# GB-webpack
+# wechat-webpack
 
 > This is a fork of [vuejs-templates/webpack-simple](https://github.com/vuejs-templates/webpack-simple), special custom for WeChat Web Pages.
 
